@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1691539706978-3cb89d88915f?q=80&w=1170&auto=format&fit=crop");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+
+
+    .doc {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); // Perfectly centers the dock
+        
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.15); // Semi-transparent
+            backdrop-filter: blur(15px); // The "Mac" blur effect
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+           .icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    // That cubic-bezier gives it a nice "pop" or bounce effect
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    // Individual Icon Colors
+    &.note { color: #f1c40f !important; }
+    &.github { color: #ffffff!important ; }
+    &.vs { color: #007acc  !important; }
+    &.apple { color: #83ac10  !important ; } // Cleaned up the RGBA for clarity
+    &.pdf { color: #ff0000 !important ; }
+
+    // 1. The main icon being hovered
+    &:hover {
+        transform: scale(1.5) translateY(-15px);
+        filter: drop-shadow(0 10px 15px rgba(255, 255, 255, 0.4));
+        z-index: 10; // Ensures it stays on top of neighbors
+    }
+
+    // 2. Target the NEXT neighbor
+    &:hover + .icon {
+        transform: scale(1.2) translateY(-8px);
+        opacity: 0.8;
+    }
+
+    // 3. Target the PREVIOUS neighbor 
+    // We use :has() on the parent container logic, or target the icon directly
+    &:has(+ .icon:hover) {
+        transform: scale(1.2) translateY(-8px);
+        opacity: 0.8;
+    }
+} 
+        }
+    }
+}

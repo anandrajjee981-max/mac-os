@@ -1,0 +1,139 @@
+.box{
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    overflow: auto;
+.top{
+    width: 100%;
+    padding:2px 4px ;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    color: antiquewhite;
+    gap: 1rem;
+    border-bottom: 2px solid gray;
+    .circle{
+        background-color: antiquewhite;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+    .close{
+        z-index: 3005;
+    }
+    .red{
+        background-color: red;
+    }
+    .green{
+        background-color: green;
+    }
+    .yellow{
+        background-color: yellowgreen;
+    }
+}
+// Variables for easy customization
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.15);
+$accent-color: #6366f1; // Premium Indigo 
+$text-primary: #ffffff;
+$text-secondary: #cbd5e1;
+
+.card {
+  background: $glass-bg;
+  backdrop-filter: blur(12px);
+  border: 1px solid $glass-border;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba($accent-color, 0.5);
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    transition: transform 0.5s ease;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $text-primary;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    
+    // Tech stack highlight
+    color: lighten($accent-color, 20%);
+    font-weight: 500;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      flex: 1;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      // GitHub Link (Outline style)
+      &:first-child {
+        border: 1px solid $accent-color;
+        color: $accent-color;
+        
+        &:hover {
+          background: rgba($accent-color, 0.1);
+        }
+      }
+
+      // Live Demo Link (Solid style)
+      &:last-child {
+        background: $accent-color;
+        color: white;
+        box-shadow: 0 4px 15px rgba($accent-color, 0.3);
+
+        &:hover {
+          background: darken($accent-color, 10%);
+          box-shadow: 0 6px 20px rgba($accent-color, 0.4);
+        }
+      }
+    }
+  }
+
+  // Liquid glass reflection effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    transform: rotate(30deg);
+    pointer-events: none;
+  }
+}
+
+}
