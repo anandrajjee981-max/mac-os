@@ -1,0 +1,146 @@
+const AnandRaj = {
+  name: "Anand Raj",
+  role: "Aspiring Software Developer | Frontend Developer",
+  
+  contact: {
+    phone: "8987479794",
+    email: "anandrajjee981@email.com",
+    portfolio: "https://anandrajjee981-max.github.io/portfolio/",
+    github: "https://github.com/anandrajjee981-max"
+  },
+
+  summary: () => {
+    return `
+    Developer focused on building modern, interactive, and high-performance web interfaces.
+    Strong grip on JavaScript, React, and UI/UX logic.
+    Passionate about creating real-world projects that feel like actual products.
+    `;
+  },
+
+  skills: {
+    languages: ["C++", "C", "Python", "JavaScript"],
+    
+    frontend: {
+      core: ["HTML5", "CSS3", "React.js"],
+      advanced: ["Responsive Design", "Component Architecture"]
+    },
+
+    libraries_tools: [
+      "GSAP (animations expert)",
+      "Chart.js",
+      "Git & GitHub"
+    ],
+
+    ai_tools: [
+      "Generative AI",
+      "Prompt Engineering"
+    ]
+  },
+
+  projects: [
+
+    {
+      name: "Mac-OS Web Interface Clone",
+      type: "Advanced Frontend Project",
+      description: `
+      Fully interactive macOS-inspired UI built with React.
+      Includes apps like Notes, Music Player, GitHub Viewer.
+      Focus on real OS-like experience, smooth animations, and UX.
+      `,
+      features: [
+        "Window management system",
+        "App switching logic",
+        "Custom UI components",
+        "Smooth GSAP animations"
+      ],
+      tech: ["React", "JavaScript", "CSS", "GSAP"],
+      status: "In Progress (High Value Project 🚀)"
+    },
+
+    {
+      name: "Smart Productivity OS",
+      description: `
+      Productivity dashboard with task and workflow system.
+      Designed like a mini operating system for managing daily work.
+      `,
+      tech: ["JavaScript", "Frontend"],
+      github: "productivity-dashboard"
+    },
+
+    {
+      name: "Travelling Website",
+      description: `
+      Fully responsive travel UI with modern layout and clean design.
+      `,
+      tech: ["HTML", "CSS"],
+      github: "responsive1anandraj"
+    },
+
+    {
+      name: "AI Ecosystem",
+      description: `
+      Goal optimizer + study scheduler + wellness assistant.
+      `,
+      tech: ["C++"]
+    },
+
+    {
+      name: "AI Fitness + Mood Tracker",
+      description: `
+      Tracks BMI, sleep, emotions with gamified experience.
+      `,
+      tech: ["C"]
+    },
+
+    {
+      name: "AI Study Scheduler",
+      description: `
+      Personalized study plans with leaderboard system.
+      `,
+      tech: ["C"]
+    }
+  ],
+
+  education: {
+    graduation: {
+      degree: "Bachelor of Information Technology",
+      university: "Ranchi University",
+      expected: 2029
+    },
+    intermediate: {
+      college: "Marwari College, Ranchi",
+      duration: "2022 - 2024"
+    }
+  },
+
+  certifications: [
+    {
+      name: "Responsive Web Design V8",
+      provider: "freeCodeCamp",
+      year: 2026
+    },
+    {
+      name: "Generative AI Prompt Engineering",
+      provider: "IBM",
+      year: 2025
+    },
+    {
+      name: "Gen AI for All",
+      provider: "Microsoft",
+      year: 2025
+    }
+  ],
+
+  strengths: [
+    "Strong JavaScript foundation",
+    "Frontend + UI logic thinking",
+    "GSAP animation edge (unique weapon 💀)",
+    "Project-based learning mindset"
+  ],
+
+  goal: () => "Crack a reputed tech internship by end of 2026 🚀"
+};
+
+
+// export default (future ready 😏)
+export default AnandRaj;
